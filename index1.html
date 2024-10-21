@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a0ce5824e9.js" crossorigin="anonymous"></script>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .item1
+        {
+            grid-area: header;
+            display: flex;
+            list-style: none;
+        }
+        .item1 li{
+            margin-left: 10px;
+            float: right;
+
+        }
+        .item1 li a{
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            text-align: center;
+
+        }
+        .item2
+        {
+           grid-area: main;
+        }
+        .item2 img
+        {
+            float: left;
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 30px;
+            
+        }
+        .item2 img:hover
+        {
+transform: scaleX(0.8);
+        }
+        .item2 figcaption
+        {
+            text-align: justify;
+            padding: 5px;
+            margin-top: 40px;
+            margin-left:  320px;
+            color: rgb(251, 251, 253);
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .item3
+        {
+            grid-area: right;
+            position: relative;
+            overflow: hidden;
+        }
+        .item3 img{
+            height: 140px;
+            width: 200px;
+            padding: 5px;
+            border-radius: 10px;
+            position: relative;
+            animation: moveUp 6s ease-in-out infinite;
+        }
+       
+        @keyframes moveUp {
+            0% {
+                transform: translateY(300%); 
+            }
+            50% {
+                transform: translateY(0); 
+            }
+            100% {
+                transform: translateY(-400%); 
+            }
+        }
+       
+
+        .item4
+        {
+            grid-area: left;
+            position: relative;
+            overflow: hidden;
+
+           
+        }
+        .item4 p
+        {
+            padding: 5px;    
+            position: relative;     
+            animation: moveupward 8s ease-in-out 1 ;
+        }
+        @keyframes moveupward
+        {
+            0%
+            {
+                transform: translateY(700%);
+            }
+            100%
+            {
+                transform: translateY(-600%);
+            }
+        }
+        .item4 li{
+            text-align: justify;
+            padding: 5px;
+            position: relative;
+            animation:upward 10s ease-in-out 1 ;
+
+        }
+        @keyframes upward
+        {
+            0%
+            {
+                transform: translateY(700px);
+            }
+           
+            100%
+            {
+                transform: translateY(-2000%);
+            }
+        }
+       
+        
+        .item5
+        {
+            grid-area: footer;
+        }
+
+    
+     .grid-container
+     {
+        display: grid;
+        height: auto;
+        grid-template-areas: 'header header header'
+        'left  main right '
+        'left main right'
+        'left main right'
+        'left  main right '
+        'left main right'
+        'footer footer footer';
+        background-color:   #452a1c;
+        gap: 3px;
+        padding: 10px;
+        
+        
+     }
+     .grid-container div:nth-child(1)
+     {
+        border: 3px solid black;
+        background-color: #dda263;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+     }
+       
+     .grid-container div:nth-child(2)
+     {
+        text-align: center;
+        padding: 20px;
+        background-color: #452a1c;
+        color: white;
+        border: 1px solid whitesmoke;
+     }
+     .grid-container div:nth-child(3)
+     {
+        text-align: center;
+        padding: 5px;
+        background-color: #fadf6d;
+
+     }
+     .grid-container div:nth-child(4)
+     {
+        text-align: justify;
+        padding: 10px;
+        background-color:#fadf6d;
+
+     }
+     .grid-container div:nth-child(5)
+     {
+        text-align: center;
+        border: 3px solid black;
+        padding: 5px;
+        background-color:  #859540;
+     }
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="item1"> 
+       <img src="logo.png" alt="logo" width="30px" height="30px" style="align-items: center;background-color: antiquewhite;border-radius: 5px;">
+       <li><a href="#">Home</a></li> 
+       <li><a href="#">About US</a></li> 
+       <li><a href="#">Conservation</a></li> 
+       <li><a href="#">Contact</a></li> 
+    </div>
+    <div class="item2">
+        <img src="./animal/Tiger-1.jpg" alt="tiger" width="280px" height="330px">
+
+        <figcaption> The tiger (Panthera tigris) is a member of the genus Panthera and the largest living cat species native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands.
+            The tiger is an apex predator and preys mainly on ungulates, which it takes by ambush.The largest of all the Asian big cats, tigers rely primarily on sight and sound rather than smell for hunting. 
+        </figcaption> 
+    </div>
+    <div class="item3">
+        <img src="./animal/tiger ad.jfif" alt="Tiger">
+        <img src="./animal/tiger ad2.jpg" alt="Tiger">
+        <img src="./animal/tiger ad3.jfif" alt="Tiger">
+       
+
+
+    </div>
+    <div class="item4">
+            <p style="text-align: justify; ">
+                The National Tiger Conservation Authority (NTCA) administers Project Tiger, a tiger conservation program in India, through eight conservation units:
+                </p><br>
+                <li>Sundarbans Conservation Unit</li>
+                <li>Northeast Conservation Unit</li>
+                <li>Western Ghats Conservation Unit</li>
+                <li>Shivalik-Terai Conservation Unit</li>
+                <li>Eastern Ghats Conservation Unit</li>
+                <li>Sariska Conservation Unit</li>
+                <li>Central India Conservation Unit</li>
+                <li>Kaziranga Conservation Unit</li> 
+       
+          
+    </div>
+    <div class="item5"> 
+        <i class="fa-regular fa-copyright" style= " background-color: antiquewhite; padding: 5px; border-radius: 10px;"></i><span style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight: bold; color: antiquewhite;">Copyright 1821</span>
+        <br><i class="fa-solid fa-phone" style="background-color: antiquewhite; padding: 5px; border-radius: 10px;"></i><span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold;color: antiquewhite;"> +91 8694587921|+91 7084569841</span>
+     </div>
+</div>
+    
+</body>
+</html>
